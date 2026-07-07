@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>عبدالله مبارك | العزايزي للاستشارات القانونية</title>
+<meta name="description" content="خبرة قانونية وإنهاء جميع الإجراءات الحكومية والقانونية داخل جمهورية مصر العربية. خدمات الجوازات والهجرة والجنسية للمصريين والأجانب بسرعة وسرية تامة." />
+<meta property="og:title" content="عبدالله مبارك | العزايزي للاستشارات القانونية" />
+<meta property="og:description" content="متخصصون في إنهاء جميع الإجراءات القانونية والحكومية داخل جمهورية مصر العربية." />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/png" href="/images/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "العزايزي للاستشارات القانونية - عبدالله مبارك",
+  "description": "إنهاء جميع الإجراءات الحكومية والقانونية داخل جمهورية مصر العربية",
+  "telephone": "+201020788788",
+  "areaServed": "EG"
+}
+</script>
+<style>
+  :root {
+    --primary: #3E4951;
+    --secondary: #C9A27B;
+    --bg: #F8F6F3;
+    --dark: #2B2B2B;
+    --border: rgba(62, 73, 81, .15);
+    --white: #FFFFFF;
+    --radius: 18px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 { font-family: 'Amiri', serif; color: var(--primary); }
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* ===== Loading Screen ===== */
+  #loader {
+    position: fixed; inset: 0; z-index: 9999;
+    background: var(--primary);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 20px; transition: opacity .6s ease, visibility .6s;
+  }
+  #loader.hidden { opacity: 0; visibility: hidden; }
+  #loader .loader-logo { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(201,162,123,.5); animation: logoPulse 2s ease-in-out infinite; }
+  @keyframes logoPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+  #loader .loader-name { font-family: 'Amiri', serif; color: var(--secondary); font-size: 2rem; letter-spacing: 1px; }
+  #loader .loader-bar { width: 180px; height: 3px; background: rgba(255,255,255,.15); border-radius: 3px; overflow: hidden; }
+  #loader .loader-bar::after {
+    content: ''; display: block; height: 100%; width: 40%;
+    background: var(--secondary); border-radius: 3px;
+    animation: loadslide 1.2s ease-in-out infinite;
+  }
+  @keyframes loadslide { 0% { transform: translateX(200%); } 100% { transform: translateX(-350%); } }
+
+  /* ===== Navigation ===== */
+  header {
+    position: fixed; top: 0; right: 0; left: 0; z-index: 1000;
+    transition: background .4s ease, box-shadow .4s ease, padding .4s ease;
+    padding: 18px 0;
+  }
+  header.scrolled {
+    background: rgba(248, 246, 243, .92);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 30px rgba(62,73,81,.08);
+    padding: 10px 0;
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+  .logo { display: flex; align-items: center; gap: 12px; line-height: 1.3; }
+  .logo .logo-img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(201,162,123,.5); flex-shrink: 0; }
+  .logo .logo-text { display: flex; flex-direction: column; }
+  .logo strong { font-family: 'Amiri', serif; font-size: 1.25rem; color: var(--white); transition: color .4s; }
+  .logo span { font-size: .75rem; color: var(--secondary); }
+  header.scrolled .logo strong { color: var(--primary); }
+  nav ul { display: flex; gap: 26px; list-style: none; align-items: center; }
+  nav a {
+    color: rgba(255,255,255,.9); font-size: .95rem; font-weight: 500;
+    position: relative; padding: 4px 0; transition: color .3s;
+  }
+  header.scrolled nav a { color: var(--primary); }
+  nav a::after {
+    content: ''; position: absolute; bottom: -2px; right: 0; width: 0; height: 2px;
+    background: var(--secondary); transition: width .3s ease;
+  }
+  html[dir="ltr"] nav a::after { right: auto; left: 0; }
+  nav a:hover::after { width: 100%; }
+  nav a:hover { color: var(--secondary); }
+  .nav-cta {
+    background: var(--secondary); color: var(--white) !important; padding: 9px 22px;
+    border-radius: 50px; font-weight: 700; transition: transform .3s, box-shadow .3s;
+  }
+  .nav-cta::after { display: none; }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(201,162,123,.4); color: var(--white) !important; }
+  .lang-btn {
+    background: rgba(255,255,255,.1); border: 1.5px solid rgba(201,162,123,.6);
+    color: var(--secondary); cursor: pointer; padding: 6px 16px; border-radius: 50px;
+    font-family: 'Tajawal', sans-serif; font-weight: 800; font-size: .9rem;
+    transition: background .3s, color .3s, transform .3s;
+    display: inline-flex; align-items: center; gap: 7px;
+  }
+  .lang-btn svg { width: 16px; height: 16px; }
+  .lang-btn:hover { background: var(--secondary); color: var(--white); transform: translateY(-2px); }
+  header.scrolled .lang-btn { background: rgba(201,162,123,.1); }
+  .burger { display: none; background: none; border: none; cursor: pointer; z-index: 1100; }
+  .burger span { display: block; width: 26px; height: 2.5px; background: var(--white); margin: 6px 0; border-radius: 2px; transition: .35s; }
+  header.scrolled .burger span { background: var(--primary); }
+  .burger.open span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+
+  /* ===== Hero ===== */
+  .hero {
+    min-height: 100vh; position: relative;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    background: url('/images/hero-bg.png') center/cover no-repeat;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(43,49,56,.78) 0%, rgba(62,73,81,.68) 55%, rgba(43,49,56,.85) 100%);
+  }
+  .hero-content { position: relative; z-index: 2; padding: 140px 24px 100px; max-width: 860px; }
+  .hero-badge {
+    display: inline-block; border: 1px solid rgba(201,162,123,.5); color: var(--secondary);
+    padding: 6px 20px; border-radius: 50px; font-size: .85rem; margin-bottom: 24px;
+    background: rgba(201,162,123,.08); backdrop-filter: blur(6px);
+  }
+  .hero h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); color: var(--white); margin-bottom: 8px; }
+  .hero h2 { font-size: clamp(1.3rem, 3vw, 1.9rem); color: var(--secondary); font-weight: 700; margin-bottom: 24px; }
+  .hero p { color: rgba(255,255,255,.85); font-size: 1.1rem; max-width: 640px; margin: 0 auto 38px; text-wrap: pretty; }
+  .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; padding: 14px 36px; border-radius: 50px;
+    font-weight: 700; font-size: 1rem; font-family: 'Tajawal', sans-serif; cursor: pointer;
+    transition: transform .3s, box-shadow .3s, background .3s; border: none;
+  }
+  .btn-primary { background: var(--secondary); color: var(--white); }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(201,162,123,.45); }
+  .btn-outline { background: rgba(255,255,255,.08); color: var(--white); border: 1.5px solid rgba(255,255,255,.4); backdrop-filter: blur(6px); }
+  .btn-outline:hover { background: rgba(255,255,255,.18); transform: translateY(-3px); }
+  .float-icon {
+    position: absolute; z-index: 2; color: rgba(201,162,123,.5);
+    animation: floaty 6s ease-in-out infinite;
+  }
+  .float-icon svg { width: 46px; height: 46px; }
+  .fi-1 { top: 22%; right: 10%; animation-delay: 0s; }
+  .fi-2 { top: 60%; right: 6%; animation-delay: 1.5s; }
+  .fi-3 { top: 28%; left: 8%; animation-delay: 3s; }
+  .fi-4 { top: 68%; left: 12%; animation-delay: 4.5s; }
+  @keyframes floaty { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-22px) rotate(4deg); } }
+  .scroll-hint {
+    position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 2;
+    width: 26px; height: 44px; border: 2px solid rgba(255,255,255,.5); border-radius: 20px;
+  }
+  .scroll-hint::after {
+    content: ''; position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+    width: 4px; height: 8px; background: var(--secondary); border-radius: 4px;
+    animation: scrolldot 1.8s ease-in-out infinite;
+  }
+  @keyframes scrolldot { 0% { opacity: 1; top: 8px; } 100% { opacity: 0; top: 24px; } }
+
+  /* ===== Sections ===== */
+  section { padding: 96px 0; }
+  .section-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+  .section-head .kicker {
+    color: var(--secondary); font-weight: 700; font-size: .9rem; letter-spacing: 2px;
+    text-transform: uppercase; display: block; margin-bottom: 10px;
+  }
+  .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); margin-bottom: 14px; text-wrap: balance; }
+  .section-head p { color: #6b7178; text-wrap: pretty; }
+  .divider {
+    width: 64px; height: 3px; background: var(--secondary); border-radius: 3px; margin: 18px auto 0;
+  }
+
+  /* Reveal animations */
+  .reveal { opacity: 0; transform: translateY(36px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ===== About ===== */
+  .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+  .about-text p { color: #555c63; font-size: 1.05rem; margin-bottom: 28px; text-wrap: pretty; }
+  .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .stat-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 30px 24px; text-align: center;
+    box-shadow: 0 6px 24px rgba(62,73,81,.05);
+    transition: transform .35s, box-shadow .35s;
+  }
+  .stat-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(62,73,81,.1); }
+  .stat-card .num { font-family: 'Amiri', serif; font-size: 2.3rem; font-weight: 700; color: var(--secondary); }
+  .stat-card .label { color: var(--primary); font-weight: 500; margin-top: 4px; }
+
+  /* ===== Services ===== */
+  .services { background: var(--white); }
+  .cat-title {
+    display: flex; align-items: center; gap: 14px; margin: 56px 0 26px;
+  }
+  .cat-title h3 { font-size: 1.5rem; }
+  .cat-title .line { flex: 1; height: 1px; background: var(--border); }
+  .cat-title .cat-icon {
+    width: 58px; height: 58px; border-radius: 16px; background: rgba(201,162,123,.12);
+    display: flex; align-items: center; justify-content: center; color: var(--secondary); flex-shrink: 0;
+    overflow: hidden; border: 1px solid rgba(201,162,123,.25);
+  }
+  .cat-icon svg { width: 24px; height: 24px; }
+  .cat-icon img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; }
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
+  .service-card {
+    background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 24px 20px; display: flex; align-items: flex-start; gap: 14px;
+    transition: transform .3s, box-shadow .3s, border-color .3s;
+  }
+  .service-card:hover {
+    transform: translateY(-5px); box-shadow: 0 14px 32px rgba(62,73,81,.1);
+    border-color: rgba(201,162,123,.5);
+  }
+  .service-card .dot {
+    width: 38px; height: 38px; border-radius: 12px; flex-shrink: 0;
+    background: var(--primary); color: var(--secondary);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .service-card .dot svg { width: 18px; height: 18px; }
+  .service-card h4 { font-family: 'Tajawal', sans-serif; font-size: 1rem; font-weight: 700; color: var(--primary); }
+  .service-card p { font-size: .84rem; color: #6b7178; margin-top: 2px; }
+
+  /* ===== Banner ===== */
+  .banner {
+    background: url('/images/queue-bg.png') center/cover no-repeat; position: relative; overflow: hidden;
+    padding: 80px 0; text-align: center;
+  }
+  .banner::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(38,45,51,.88) 0%, rgba(62,73,81,.82) 100%);
+  }
+  .banner .container { position: relative; z-index: 1; }
+  .banner h2 { color: var(--white); font-size: clamp(1.9rem, 4.5vw, 3rem); margin-bottom: 12px; }
+  .banner h2 em { color: var(--secondary); font-style: normal; }
+  .banner p { color: rgba(255,255,255,.8); font-size: 1.2rem; margin-bottom: 32px; }
+  .banner-icons { display: flex; justify-content: center; gap: 30px; margin-bottom: 34px; flex-wrap: wrap; }
+  .banner-icons .b-icon {
+    width: 62px; height: 62px; border-radius: 18px; background: rgba(255,255,255,.06);
+    border: 1px solid rgba(201,162,123,.3); color: var(--secondary);
+    display: flex; align-items: center; justify-content: center;
+    animation: floaty 5s ease-in-out infinite;
+  }
+  .banner-icons .b-icon:nth-child(2) { animation-delay: 1.2s; }
+  .banner-icons .b-icon:nth-child(3) { animation-delay: 2.4s; }
+  .banner-icons svg { width: 28px; height: 28px; }
+
+  /* ===== Why Us ===== */
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
+  .why-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 38px 26px; text-align: center; position: relative; overflow: hidden;
+    transition: transform .35s, box-shadow .35s;
+  }
+  .why-card::before {
+    content: ''; position: absolute; top: 0; right: 0; left: 0; height: 3px;
+    background: var(--secondary); transform: scaleX(0); transform-origin: right;
+    transition: transform .4s ease;
+  }
+  html[dir="ltr"] .why-card::before { transform-origin: left; }
+  .why-card:hover::before { transform: scaleX(1); }
+  .why-card:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(62,73,81,.12); }
+  .why-card .w-icon {
+    width: 92px; height: 92px; margin: 0 auto 18px; border-radius: 50%;
+    background: rgba(201,162,123,.12); color: var(--secondary);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; border: 2px solid rgba(201,162,123,.3);
+    transition: transform .35s;
+  }
+  .why-card:hover .w-icon { transform: scale(1.08); }
+  .why-card .w-icon svg { width: 30px; height: 30px; }
+  .why-card .w-icon img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+  .why-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+  .why-card p { color: #6b7178; font-size: .92rem; }
+
+  /* ===== Process ===== */
+  .process { background: var(--white); }
+  .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
+  .timeline::before {
+    content: ''; position: absolute; top: 34px; right: 12%; left: 12%; height: 2px;
+    background: repeating-linear-gradient(to left, var(--secondary) 0 8px, transparent 8px 16px);
+  }
+  .step { text-align: center; position: relative; }
+  .step .circle {
+    width: 68px; height: 68px; margin: 0 auto 20px; border-radius: 50%;
+    background: var(--primary); color: var(--secondary);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Amiri', serif; font-size: 1.7rem; font-weight: 700;
+    border: 4px solid var(--bg); box-shadow: 0 0 0 1.5px var(--secondary);
+    position: relative; z-index: 1; transition: transform .35s, background .35s;
+  }
+  .step:hover .circle { transform: scale(1.12); background: var(--secondary); color: var(--white); }
+  .step h3 { font-size: 1.15rem; margin-bottom: 6px; }
+  .step p { color: #6b7178; font-size: .9rem; }
+
+  /* ===== FAQ ===== */
+  .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+  .faq-item {
+    background: var(--white); border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
+    transition: box-shadow .3s;
+  }
+  .faq-item.active { box-shadow: 0 12px 30px rgba(62,73,81,.09); border-color: rgba(201,162,123,.5); }
+  .faq-q {
+    width: 100%; background: none; border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 20px 24px; font-family: 'Tajawal', sans-serif; font-size: 1.05rem;
+    font-weight: 700; color: var(--primary); text-align: right;
+  }
+  html[dir="ltr"] .faq-q { text-align: left; }
+  .faq-q .chev { transition: transform .35s; color: var(--secondary); flex-shrink: 0; }
+  .faq-item.active .chev { transform: rotate(180deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height .45s ease; }
+  .faq-a p { padding: 0 24px 22px; color: #6b7178; }
+
+  /* ===== Payments ===== */
+  .payments { background: var(--white); }
+  .pay-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; }
+  .bank-btn { text-decoration: none; }
+  .pay-card {
+    background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 34px 28px; text-align: center; transition: transform .35s, box-shadow .35s;
+  }
+  .pay-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(62,73,81,.1); }
+  .pay-card .p-icon {
+    width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 16px;
+    background: var(--primary); color: var(--secondary);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .pay-card .p-icon svg { width: 28px; height: 28px; }
+  .pay-card .p-logo {
+    width: 84px; height: 84px; margin: 0 auto 16px; border-radius: 20px;
+    background: var(--white); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
+  }
+  .pay-card .p-logo img { width: 64px; height: 64px; object-fit: contain; }
+  .pay-card h3 { font-size: 1.3rem; margin-bottom: 6px; }
+  .pay-card .number {
+    font-size: 1.25rem; font-weight: 800; color: var(--primary);
+    direction: ltr; letter-spacing: 1px; margin-bottom: 18px;
+  }
+  .copy-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--secondary); color: var(--white); border: none; cursor: pointer;
+    padding: 10px 26px; border-radius: 50px; font-family: 'Tajawal', sans-serif;
+    font-weight: 700; font-size: .95rem; transition: transform .3s, box-shadow .3s;
+  }
+  .copy-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(201,162,123,.4); }
+  .copy-btn svg { width: 16px; height: 16px; }
+
+  /* ===== Bank Choice Modal ===== */
+  .bank-options { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+  .bank-option {
+    display: flex; align-items: center; gap: 14px; width: 100%;
+    background: var(--bg); border: 1.5px solid var(--border); border-radius: 14px;
+    padding: 16px 18px; cursor: pointer; font-family: 'Tajawal', sans-serif;
+    text-align: start; transition: border-color .3s, transform .3s, box-shadow .3s;
+  }
+  .bank-option:hover {
+    border-color: var(--secondary); transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(201,162,123,.2);
+  }
+  .bank-option .bank-icon {
+    width: 46px; height: 46px; border-radius: 12px; flex-shrink: 0;
+    background: var(--primary); color: var(--secondary);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .bank-option .bank-icon svg { width: 22px; height: 22px; }
+  .bank-option strong { display: block; color: var(--primary); font-size: 1.05rem; }
+  .bank-option span { display: block; color: #6b7178; font-size: .85rem; }
+
+  /* ===== Service Modal ===== */
+  .service-card { cursor: pointer; }
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 3000;
+    background: rgba(38,45,51,.55); backdrop-filter: blur(4px);
+    display: flex; align-items: center; justify-content: center; padding: 20px;
+    opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s;
+  }
+  .modal-overlay.open { opacity: 1; visibility: visible; }
+  .modal-box {
+    background: var(--white); border-radius: var(--radius); width: 100%; max-width: 480px;
+    max-height: 90vh; overflow-y: auto; padding: 32px 28px; position: relative;
+    transform: translateY(24px) scale(.97); transition: transform .35s;
+    box-shadow: 0 24px 60px rgba(0,0,0,.25);
+  }
+  .modal-overlay.open .modal-box { transform: translateY(0) scale(1); }
+  .modal-close {
+    position: absolute; top: 16px; left: 16px; width: 36px; height: 36px;
+    border-radius: 50%; border: 1px solid var(--border); background: var(--bg);
+    color: var(--primary); cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background .3s, transform .3s;
+  }
+  html[dir="ltr"] .modal-close { left: auto; right: 16px; }
+  .modal-close:hover { background: var(--border); transform: rotate(90deg); }
+  .modal-close svg { width: 18px; height: 18px; }
+  .modal-box .m-kicker { color: var(--secondary); font-weight: 700; font-size: .85rem; letter-spacing: 1px; }
+  .modal-box h3 { font-size: 1.35rem; margin: 4px 0 20px; color: var(--primary); }
+  .modal-box .field { margin-bottom: 16px; }
+  .modal-box label { display: block; font-weight: 700; margin-bottom: 7px; font-size: .95rem; color: var(--primary); }
+  .modal-box input, .modal-box textarea {
+    width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 12px;
+    font-family: 'Tajawal', sans-serif; font-size: 1rem; background: var(--bg); color: var(--primary);
+    transition: border-color .3s, box-shadow .3s;
+  }
+  .modal-box input:focus, .modal-box textarea:focus {
+    outline: none; border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(201,162,123,.18);
+  }
+  .modal-box textarea { min-height: 96px; resize: vertical; }
+  .modal-send {
+    width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    background: #25d366; color: #fff; border: none; cursor: pointer;
+    padding: 14px 26px; border-radius: 50px; font-family: 'Tajawal', sans-serif;
+    font-weight: 800; font-size: 1.05rem; transition: transform .3s, box-shadow .3s;
+  }
+  .modal-send:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(37,211,102,.4); }
+  .modal-send svg { width: 20px; height: 20px; }
+
+  /* ===== Contact ===== */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: start; }
+  .contact-info h3 { font-size: 1.6rem; margin-bottom: 14px; }
+  .contact-info > p { color: #6b7178; margin-bottom: 30px; text-wrap: pretty; }
+  .phone-row {
+    display: flex; align-items: center; gap: 14px; background: var(--white);
+    border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; margin-bottom: 14px;
+    transition: transform .3s, box-shadow .3s;
+  }
+  .phone-row:hover { transform: translateX(-4px); box-shadow: 0 10px 24px rgba(62,73,81,.08); }
+  html[dir="ltr"] .phone-row:hover { transform: translateX(4px); }
+  .phone-row .ph-icon {
+    width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+    background: rgba(201,162,123,.12); color: var(--secondary);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .phone-row .ph-icon svg { width: 20px; height: 20px; }
+  .phone-row a { font-weight: 800; font-size: 1.1rem; color: var(--primary); direction: ltr; }
+  .contact-form {
+    background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 36px; box-shadow: 0 10px 34px rgba(62,73,81,.06);
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field { margin-bottom: 18px; }
+  .field label { display: block; font-weight: 700; font-size: .9rem; color: var(--primary); margin-bottom: 7px; }
+  .field input, .field select, .field textarea {
+    width: 100%; padding: 13px 16px; border: 1.5px solid var(--border); border-radius: 12px;
+    font-family: 'Tajawal', sans-serif; font-size: .95rem; background: var(--bg); color: var(--dark);
+    transition: border-color .3s, box-shadow .3s;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none; border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(201,162,123,.15);
+  }
+  .field textarea { resize: vertical; min-height: 110px; }
+  .form-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-dark { background: var(--primary); color: var(--white); }
+  .btn-dark:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba(62,73,81,.3); }
+  .form-note { margin-top: 14px; font-size: .9rem; color: var(--secondary); font-weight: 700; display: none; }
+  .form-note.show { display: block; }
+
+  /* ===== WhatsApp Float ===== */
+  .whatsapp-float {
+    position: fixed; bottom: 26px; left: 26px; z-index: 900;
+    width: 62px; height: 62px; border-radius: 50%;
+    background: #25D366; color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 26px rgba(37,211,102,.45);
+    transition: transform .3s, box-shadow .3s;
+    animation: pulse-wa 2.4s infinite;
+  }
+  html[dir="ltr"] .whatsapp-float { left: auto; right: 26px; }
+  .whatsapp-float svg { width: 32px; height: 32px; }
+  .whatsapp-float:hover { transform: scale(1.12) rotate(6deg); box-shadow: 0 12px 32px rgba(37,211,102,.6); animation: none; }
+  @keyframes pulse-wa {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102,.45); }
+    70% { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+  }
+  .wa-tooltip {
+    position: absolute; right: calc(100% + 14px); top: 50%; transform: translateY(-50%);
+    background: var(--primary); color: var(--white); font-size: .82rem; font-weight: 500;
+    padding: 8px 14px; border-radius: 10px; white-space: nowrap;
+    opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s;
+  }
+  html[dir="ltr"] .wa-tooltip { right: auto; left: calc(100% + 14px); }
+  html[dir="ltr"] .whatsapp-float .wa-tooltip { left: auto; right: calc(100% + 14px); }
+  .whatsapp-float:hover .wa-tooltip { opacity: 1; visibility: visible; }
+
+  /* ===== Footer ===== */
+  footer { background: var(--primary); color: rgba(255,255,255,.75); padding: 70px 0 0; }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 44px; padding-bottom: 50px; }
+  .footer-brand strong { font-family: 'Amiri', serif; font-size: 1.5rem; color: var(--white); display: block; }
+  .footer-brand em { color: var(--secondary); font-style: normal; font-size: .95rem; display: block; margin-bottom: 16px; }
+  .footer-brand p { font-size: .92rem; max-width: 320px; text-wrap: pretty; }
+  footer h4 { color: var(--white); font-size: 1.1rem; margin-bottom: 18px; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { font-size: .92rem; transition: color .3s, padding-right .3s, padding-left .3s; }
+  .footer-links a:hover { color: var(--secondary); padding-right: 6px; }
+  html[dir="ltr"] .footer-links a:hover { padding-right: 0; padding-left: 6px; }
+  .footer-phones { direction: ltr; text-align: right; }
+  html[dir="ltr"] .footer-phones { text-align: left; }
+  .social-row { display: flex; gap: 12px; margin-top: 20px; }
+  .social-row a {
+    width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.2);
+    display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.8);
+    transition: background .3s, color .3s, transform .3s;
+  }
+  .social-row a:hover { background: var(--secondary); color: var(--white); transform: translateY(-3px); }
+  .social-row svg { width: 18px; height: 18px; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.1); padding: 22px 0; text-align: center; font-size: .85rem;
+  }
+  .footer-bottom em { color: var(--secondary); font-style: normal; }
+  .dev-credit {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    margin-top: 18px; color: rgba(255,255,255,.75); transition: opacity .3s, transform .3s;
+  }
+  .dev-credit:hover { opacity: .85; transform: translateY(-2px); }
+  .dev-credit img { width: 52px; height: 52px; object-fit: contain; }
+  .dev-credit .dev-text { display: flex; flex-direction: column; text-align: right; line-height: 1.5; }
+  html[dir="ltr"] .dev-credit .dev-text { text-align: left; }
+  .dev-credit .dev-text span { font-size: .78rem; }
+  .dev-credit .dev-text strong { color: var(--secondary); font-size: .95rem; letter-spacing: .5px; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 992px) {
+    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .timeline { grid-template-columns: repeat(2, 1fr); gap: 40px 24px; }
+    .timeline::before { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    nav {
+      position: fixed; inset: 0; background: var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      transform: translateX(100%); transition: transform .45s ease; z-index: 1050;
+    }
+    html[dir="ltr"] nav { transform: translateX(-100%); }
+    nav.open { transform: translateX(0) !important; }
+    nav ul { flex-direction: column; text-align: center; gap: 22px; }
+    nav a { color: var(--white) !important; font-size: 1.2rem; }
+    .burger { display: block; }
+    .float-icon { display: none; }
+    section { padding: 68px 0; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .timeline { grid-template-columns: 1fr; }
+    .whatsapp-float { bottom: 18px; left: 18px; width: 56px; height: 56px; }
+    html[dir="ltr"] .whatsapp-float { left: auto; right: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loader" aria-hidden="true">
+  <img class="loader-logo" src="/images/logo.png" alt="" width="110" height="110" />
+  <div class="loader-name">العزايزي للاستشارات القانونية</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- Header -->
+<header id="header">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">
+      <img class="logo-img" src="/images/logo.png" alt="شعار العزايزي للاستشارات القانونية" width="46" height="46" />
+      <div class="logo-text">
+        <strong data-i18n="brandName">عبدالله مبارك</strong>
+        <span data-i18n="brandSub">العزايزي للاستشارات القانونية</span>
+      </div>
+    </a>
+    <button class="burger" id="burger" aria-label="فتح القائمة" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav" aria-label="القائمة الرئيسية">
+      <ul>
+        <li><a href="#home" data-i18n="navHome">الرئيسية</a></li>
+        <li><a href="#about" data-i18n="navAbout">من نحن</a></li>
+        <li><a href="#services" data-i18n="navServices">الخدمات</a></li>
+        <li><a href="#immigration" data-i18n="navImmigration">الجوازات والهجرة</a></li>
+        <li><a href="#payments" data-i18n="navPayments">طرق الدفع</a></li>
+        <li><a href="#faq" data-i18n="navFaq">الأسئلة الشائعة</a></li>
+        <li><a href="#contact" class="nav-cta" data-i18n="navContact">تواصل معنا</a></li>
+        <li>
+          <button type="button" class="lang-btn" id="lang-toggle" aria-label="Switch language">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span id="lang-toggle-label">English</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <span class="float-icon fi-1" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M7 7l-4 5c0 1.7 1.8 3 4 3s4-1.3 4-3L7 7zM17 7l-4 5c0 1.7 1.8 3 4 3s4-1.3 4-3l-4-5zM3 7h18M8 21h8"/></svg>
+  </span>
+  <span class="float-icon fi-2" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="9" r="3"/><path d="M8 16h8"/></svg>
+  </span>
+  <span class="float-icon fi-3" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+  </span>
+  <span class="float-icon fi-4" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+  </span>
+
+  <div class="hero-content">
+    <span class="hero-badge" data-i18n="heroBadge">استشارات قانونية وخدمات حكومية متكاملة</span>
+    <h1 data-i18n="brandName">عبدالله مبارك</h1>
+    <h2 data-i18n="brandSub">العزايزي للاستشارات القانونية</h2>
+    <p data-i18n="heroDesc">متخصصون في إنهاء جميع الإجراءات القانونية والحكومية داخل جمهورية مصر العربية، وخدمات الجوازات والهجرة والجنسية للمصريين والأجانب، مع سرعة الإنجاز وسرية تامة.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-primary" data-i18n="navContact">تواصل معنا</a>
+      <a href="#services" class="btn btn-outline" data-i18n="heroCta2">اطلب الخدمة</a>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"></div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker" data-i18n="aboutKicker">من نحن</span>
+      <h2 data-i18n="aboutTitle">خبرة قانونية تستحق ثقتك</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p data-i18n="aboutDesc">نحن مجموعة متخصصة في إنهاء كافة الإجراءات القانونية والحكومية داخل جمهورية مصر العربية، مع خبرة واسعة في خدمات الجوازات والهجرة والجنسية، وإجراءات التجنيد، واكتساب الجنسية، والتنازل عنها، وإنهاء جميع المعاملات الرسمية للمصريين والأجانب بسرعة ودقة وسرية.</p>
+        <a href="#contact" class="btn btn-primary" data-i18n="aboutCta">ابدأ معاملتك الآن</a>
+      </div>
+      <div class="stats reveal">
+        <div class="stat-card"><div class="num" data-count="10">0</div><div class="label" data-i18n="statYears">سنوات خبرة</div></div>
+        <div class="stat-card"><div class="num" data-count="5000">0</div><div class="label" data-i18n="statCases">معاملة منجزة</div></div>
+        <div class="stat-card"><div class="num" data-i18n="stat100">١٠٠٪</div><div class="label" data-i18n="statSpeed">دقة وسرعة</div></div>
+        <div class="stat-card"><div class="num" data-i18n="stat100">١٠٠٪</div><div class="label" data-i18n="statSecrecy">سرية كاملة</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker" data-i18n="servicesKicker">خدماتنا</span>
+      <h2 data-i18n="servicesTitle">خدمات متكاملة تحت سقف واحد</h2>
+      <p data-i18n="servicesDesc">نقدم مجموعة شاملة من الخدمات القانونية والحكومية بأعلى معايير الجودة والاحترافية.</p>
+      <div class="divider"></div>
+    </div>
+
+    <!-- 1. Passports & Immigration -->
+    <div class="cat-title reveal" id="immigration">
+      <span class="cat-icon"><img src="/images/icon-passport.png" alt="" loading="lazy" /></span>
+      <h3 data-i18n="catImmigration">خدمات الجوازات والهجرة والجنسية</h3>
+      <span class="line"></span>
+    </div>
+    <div class="cards-grid reveal" id="immigration-cards"></div>
+
+    <!-- 2. Civil Status Services -->
+    <div class="cat-title reveal" id="civil">
+      <span class="cat-icon"><img src="/images/icon-civil.png" alt="" loading="lazy" /></span>
+      <h3 data-i18n="catCivil">خدمات الأحوال المدنية</h3>
+      <span class="line"></span>
+    </div>
+    <div class="cards-grid reveal" id="civil-cards"></div>
+
+    <!-- 3. Egyptian Foreign Ministry -->
+    <div class="cat-title reveal" id="foreign">
+      <span class="cat-icon"><img src="/images/icon-foreign.png" alt="" loading="lazy" /></span>
+      <h3 data-i18n="catForeign">الخارجية المصرية</h3>
+      <span class="line"></span>
+    </div>
+    <div class="cards-grid reveal" id="foreign-cards"></div>
+
+    <!-- 4. Missions Administration -->
+    <div class="cat-title reveal" id="missions">
+      <span class="cat-icon"><img src="/images/icon-missions.png" alt="" loading="lazy" /></span>
+      <h3 data-i18n="catMissions">التعامل مع إدارة البعثات</h3>
+      <span class="line"></span>
+    </div>
+    <div class="cards-grid reveal" id="missions-cards"></div>
+
+    <!-- 5. Military -->
+    <div class="cat-title reveal" id="military">
+      <span class="cat-icon"><img src="/images/icon-insurance.png" alt="" loading="lazy" /></span>
+      <h3 data-i18n="catMilitary">خدمات التجنيد</h3>
+      <span class="line"></span>
+    </div>
+    <div class="cards-grid reveal" id="military-cards"></div>
+
+    <!-- 6. Universities & Syndicates -->
+    <div class="cat-title reveal" id="universities">
+      <span class="cat-icon"><img src="/images/icon-education.png" alt="" loading="lazy" /></span>
+      <h3 data-i18n="catUni">الجامعات والنقابات</h3>
+      <span class="line"></span>
+    </div>
+    <div class="cards-grid reveal" id="uni-cards"></div>
+
+    <!-- 7. Government Services -->
+    <div class="cat-title reveal" id="government">
+      <span class="cat-icon"><img src="/images/icon-government.png" alt="" loading="lazy" /></span>
+      <h3 data-i18n="catGov">الخدمات الحكومية</h3>
+      <span class="line"></span>
+    </div>
+    <div class="cards-grid reveal" id="gov-cards"></div>
+
+    <!-- 8. Legal Services -->
+    <div class="cat-title reveal" id="legal">
+      <span class="cat-icon"><img src="/images/icon-legal.png" alt="" loading="lazy" /></span>
+      <h3 data-i18n="catLegal">الخدمات القانونية</h3>
+      <span class="line"></span>
+    </div>
+    <div class="cards-grid reveal" id="legal-cards"></div>
+  </div>
+</section>
+
+<!-- Banner -->
+<section class="banner">
+  <div class="container reveal">
+    <div class="banner-icons" aria-hidden="true">
+      <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6"/></svg></span>
+      <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.7 2z"/></svg></span>
+      <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-6 9 6v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/><path d="M9 22V12h6v10"/></svg></span>
+    </div>
+    <h2 id="banner-title">ورقك الحكومي <em>بدون طوابير</em></h2>
+    <p data-i18n="bannerDesc">بالتليفون ومن الباب إلى الباب.</p>
+    <a href="#contact" class="btn btn-primary" data-i18n="bannerCta">اطلب خدمتك الآن</a>
+  </div>
+</section>
+
+<!-- Why Us -->
+<section id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker" data-i18n="whyKicker">لماذا نحن</span>
+      <h2 data-i18n="whyTitle">لماذا يختارنا عملاؤنا؟</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-card">
+        <div class="w-icon"><img src="/images/icon-experience.png" alt="" loading="lazy" /></div>
+        <h3 data-i18n="why1Title">خبرة قانونية</h3>
+        <p data-i18n="why1Desc">فريق متخصص بخبرة تتجاوز عشر سنوات في كافة الإجراءات القانونية والحكومية.</p>
+      </div>
+      <div class="why-card">
+        <div class="w-icon"><img src="/images/icon-time.png" alt="" loading="lazy" /></div>
+        <h3 data-i18n="why2Title">سرعة الإنجاز</h3>
+        <p data-i18n="why2Desc">ننهي معاملتك في أسرع وقت ممكن دون أي تأخير أو تعقيدات.</p>
+      </div>
+      <div class="why-card">
+        <div class="w-icon"><img src="/images/icon-security.png" alt="" loading="lazy" /></div>
+        <h3 data-i18n="why3Title">سرية تامة</h3>
+        <p data-i18n="why3Desc">جميع بياناتك ومستنداتك في أمان كامل مع الحفاظ على أعلى درجات الخصوصية.</p>
+      </div>
+      <div class="why-card">
+        <div class="w-icon"><img src="/images/icon-team.png" alt="" loading="lazy" /></div>
+        <h3 data-i18n="why4Title">متابعة مستمرة</h3>
+        <p data-i18n="why4Desc">نطلعك على كل تطورات معاملتك أولًا بأول حتى استلامك الخدمة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker" data-i18n="processKicker">خطوات العمل</span>
+      <h2 data-i18n="processTitle">كيف نعمل؟</h2>
+      <p data-i18n="processDesc">أربع خطوات بسيطة تفصلك عن إنهاء معاملتك بالكامل.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="timeline reveal">
+      <div class="step">
+        <div class="circle" data-i18n="step1Num">١</div>
+        <h3 data-i18n="step1Title">التواصل معنا</h3>
+        <p data-i18n="step1Desc">اتصل بنا أو راسلنا عبر واتساب لتحديد الخدمة المطلوبة.</p>
+      </div>
+      <div class="step">
+        <div class="circle" data-i18n="step2Num">٢</div>
+        <h3 data-i18n="step2Title">إرسال المستندات</h3>
+        <p data-i18n="step2Desc">أرسل المستندات المطلوبة بكل سهولة دون الحاجة للحضور.</p>
+      </div>
+      <div class="step">
+        <div class="circle" data-i18n="step3Num">٣</div>
+        <h3 data-i18n="step3Title">إنهاء الإجراءات</h3>
+        <p data-i18n="step3Desc">نتولى كافة الإجراءات الرسمية نيابة عنك بسرعة ودقة.</p>
+      </div>
+      <div class="step">
+        <div class="circle" data-i18n="step4Num">٤</div>
+        <h3 data-i18n="step4Title">استلام الخدمة</h3>
+        <p data-i18n="step4Desc">تستلم أوراقك جاهزة حتى باب منزلك في أي مكان.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker" data-i18n="faqKicker">الأسئلة الشائعة</span>
+      <h2 data-i18n="faqTitle">إجابات لأكثر الأسئلة تكرارًا</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span data-i18n="faq1Q">كم تستغرق الإجراءات؟</span>
+          <span class="chev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq-a"><p data-i18n="faq1A">تختلف المدة حسب نوع الخدمة، لكننا نحرص دائمًا على إنهاء المعاملات في أسرع وقت ممكن، وغالبًا ما تُنجز المستخرجات الرسمية خلال أيام قليلة.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span data-i18n="faq2Q">هل يمكن إنهاء الخدمة عن بعد؟</span>
+          <span class="chev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq-a"><p data-i18n="faq2A">نعم بالتأكيد، جميع خدماتنا تتم بالتليفون ومن الباب إلى الباب دون الحاجة لحضورك شخصيًا، سواء كنت داخل مصر أو خارجها.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span data-i18n="faq3Q">كيف يتم الدفع؟</span>
+          <span class="chev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq-a"><p data-i18n="faq3A">نوفر طرق دفع سهلة وآمنة عبر إنستاباي وفودافون كاش والتحويل البنكي المباشر، ويمكنك الاطلاع على التفاصيل في قسم طرق الدفع بالموقع.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span data-i18n="faq4Q">هل يوجد متابعة مستمرة؟</span>
+          <span class="chev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq-a"><p data-i18n="faq4A">نعم، نوفر متابعة مستمرة لجميع مراحل معاملتك ونطلعك على المستجدات أولًا بأول حتى استلامك الخدمة كاملة.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Payments -->
+<section class="payments" id="payments">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker" data-i18n="payKicker">طرق الدفع</span>
+      <h2 data-i18n="payTitle">ادفع بسهولة وأمان</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="pay-grid reveal">
+      <div class="pay-card">
+        <div class="p-logo"><img src="/images/instapay.png" alt="شعار إنستاباي الرسمي" width="72" height="72" loading="lazy" /></div>
+        <h3>Instapay</h3>
+        <div class="number">+20 102 078 8788</div>
+        <button class="copy-btn" data-copy="+201020788788">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span data-i18n="copyNumber">نسخ الرقم</span>
+        </button>
+      </div>
+      <div class="pay-card">
+        <div class="p-logo"><img src="/images/vodafone.svg" alt="شعار فودافون كاش الرسمي" width="72" height="72" loading="lazy" /></div>
+        <h3>Vodafone Cash</h3>
+        <div class="number">+20 102 064 4633</div>
+        <button class="copy-btn" data-copy="+201020644633">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span data-i18n="copyNumber">نسخ الرقم</span>
+        </button>
+      </div>
+      <div class="pay-card">
+        <div class="p-logo"><img src="/images/icon-bank.png" alt="التحويل البنكي" width="72" height="72" loading="lazy" /></div>
+        <h3 data-i18n="bankCardTitle">الحسابات البنكية</h3>
+        <div class="number" data-i18n="bankCardSub">تحويل بنكي مباشر</div>
+        <button type="button" class="copy-btn" id="bank-request-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-6 9 6M4 10v9M20 10v9M2 19h20M8 19v-6M12 19v-6M16 19v-6"/></svg>
+          <span data-i18n="bankCardCta">اطلب الحساب البنكي</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker" data-i18n="contactKicker">تواصل معنا</span>
+      <h2 data-i18n="contactTitle">نحن في انتظارك</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3 data-i18n="contactSub">ابدأ معاملتك اليوم</h3>
+        <p data-i18n="contactDesc">تواصل معنا الآن وسيقوم فريقنا بالرد عليك في أسرع وقت لتحديد احتياجاتك وبدء إجراءاتك فورًا.</p>
+        <div class="phone-row">
+          <span class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <a href="tel:+201020788788">+20 102 078 8788</a>
+        </div>
+        <div class="phone-row">
+          <span class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <a href="tel:+201020644633">+20 102 064 4633</a>
+        </div>
+        <a href="tel:+201020788788" class="btn btn-primary" style="margin-top: 18px;" data-i18n="callNow">اتصل الآن</a>
+      </div>
+      <form class="contact-form reveal" id="contact-form">
+        <div class="form-row">
+          <div class="field">
+            <label for="f-name" data-i18n="formName">الاسم</label>
+            <input type="text" id="f-name" name="name" placeholder="اكتب اسمك الكامل" data-i18n-placeholder="formNamePh" required />
+          </div>
+          <div class="field">
+            <label for="f-phone" data-i18n="formPhone">رقم الهاتف</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="01XXXXXXXXX" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-service" data-i18n="formService">الخدمة المطلوبة</label>
+          <select id="f-service" name="service" required></select>
+        </div>
+        <div class="field">
+          <label for="f-message" data-i18n="formMessage">رسالتك</label>
+          <textarea id="f-message" name="message" placeholder="اكتب تفاصيل طلبك هنا..." data-i18n-placeholder="formMessagePh"></textarea>
+        </div>
+        <div class="form-btns">
+          <button type="submit" class="btn btn-dark" data-i18n="formSubmit">أرسل رسالة</button>
+        </div>
+        <p class="form-note" id="form-note" data-i18n="formNote">تم تجهيز رسالتك، سيتم فتح واتساب لإرسالها الآن.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Service Request Modal -->
+<div class="modal-overlay" id="service-modal" role="dialog" aria-modal="true" aria-labelledby="modal-service-name">
+  <div class="modal-box">
+    <button type="button" class="modal-close" id="modal-close" aria-label="إغلاق">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <span class="m-kicker" data-i18n="modalKicker">طلب خدمة</span>
+    <h3 id="modal-service-name">اسم الخدمة</h3>
+    <form id="service-form">
+      <div class="field">
+        <label for="m-name" data-i18n="modalName">الاسم بالكامل</label>
+        <input type="text" id="m-name" name="name" placeholder="اكتب اسمك الكامل" data-i18n-placeholder="formNamePh" required />
+      </div>
+      <div class="field">
+        <label for="m-phone" data-i18n="formPhone">رقم الهاتف</label>
+        <input type="tel" id="m-phone" name="phone" placeholder="01XXXXXXXXX" required />
+      </div>
+      <div class="field">
+        <label for="m-message" data-i18n="modalDetails">تفاصيل الطلب (اختياري)</label>
+        <textarea id="m-message" name="message" placeholder="اكتب أي تفاصيل إضافية هنا..." data-i18n-placeholder="modalDetailsPh"></textarea>
+      </div>
+      <button type="submit" class="modal-send">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.89 7c0 5.45-4.44 9.87-9.9 9.87M20.47 3.6A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.33-1.66a11.9 11.9 0 0 0 5.66 1.44h.01c6.55 0 11.89-5.33 11.89-11.89a11.8 11.8 0 0 0-3.48-8.4"/></svg>
+        <span data-i18n="modalSend">إرسال عبر واتساب</span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Bank Choice Modal -->
+<div class="modal-overlay" id="bank-modal" role="dialog" aria-modal="true" aria-labelledby="bank-modal-title">
+  <div class="modal-box">
+    <button type="button" class="modal-close" id="bank-modal-close" aria-label="إغلاق">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <span class="m-kicker" data-i18n="bankModalKicker">الحسابات البنكية</span>
+    <h3 id="bank-modal-title" data-i18n="bankModalTitle">اختر البنك</h3>
+    <div class="bank-options">
+      <button type="button" class="bank-option" data-bank="misr">
+        <span class="bank-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-6 9 6M4 10v9M20 10v9M2 19h20M8 19v-6M12 19v-6M16 19v-6"/></svg></span>
+        <span>
+          <strong data-i18n="bankMisr">بنك مصر</strong>
+          <span data-i18n="bankOptionHint">اضغط لطلب رقم الحساب عبر واتساب</span>
+        </span>
+      </button>
+      <button type="button" class="bank-option" data-bank="ahly">
+        <span class="bank-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-6 9 6M4 10v9M20 10v9M2 19h20M8 19v-6M12 19v-6M16 19v-6"/></svg></span>
+        <span>
+          <strong data-i18n="bankAhly">البنك الأهلي المصري</strong>
+          <span data-i18n="bankOptionHint">اضغط لطلب رقم الحساب عبر واتساب</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/201020788788" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="تواصل معنا عبر واتساب">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.89 7c0 5.45-4.44 9.87-9.9 9.87M20.47 3.6A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.33-1.66a11.9 11.9 0 0 0 5.66 1.44h.01c6.55 0 11.89-5.33 11.89-11.89a11.8 11.8 0 0 0-3.48-8.4"/></svg>
+  <span class="wa-tooltip" data-i18n="waTooltip">تواصل معنا عبر واتساب</span>
+</a>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <strong data-i18n="brandName">عبدالله مبارك</strong>
+        <em data-i18n="brandSub">العزايزي للاستشارات القانونية</em>
+        <p data-i18n="footerDesc">خبرة قانونية وإنهاء جميع الإجراءات الحكومية والقانونية داخل جمهورية مصر العربية بسرعة وسرية تامة.</p>
+        <div class="social-row">
+          <a href="#" aria-label="فيسبوك"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://wa.me/201020788788" target="_blank" rel="noopener noreferrer" aria-label="واتساب"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.89 7c0 5.45-4.44 9.87-9.9 9.87M20.47 3.6A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.33-1.66a11.9 11.9 0 0 0 5.66 1.44h.01c6.55 0 11.89-5.33 11.89-11.89a11.8 11.8 0 0 0-3.48-8.4"/></svg></a>
+          <a href="tel:+201020788788" aria-label="اتصال هاتفي"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.7 2z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="footerLinks">روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="#services" data-i18n="navServices">الخدمات</a></li>
+          <li><a href="#immigration" data-i18n="navImmigration">الجوازات والهجرة</a></li>
+          <li><a href="#payments" data-i18n="navPayments">طرق الدفع</a></li>
+          <li><a href="#faq" data-i18n="navFaq">الأسئلة الشائعة</a></li>
+          <li><a href="#contact" data-i18n="navContact">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footerPhones">أرقام التواصل</h4>
+        <ul class="footer-links footer-phones">
+          <li><a href="tel:+201020788788">+20 102 078 8788</a></li>
+          <li><a href="tel:+201020644633">+20 102 064 4633</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footerRights">جميع الحقوق محفوظة</span> © <span id="year"></span> <em data-i18n="footerBrandLine">عبدالله مبارك — العزايزي للاستشارات القانونية</em>
+      <a href="https://www.zero--nine.online/" target="_blank" rel="noopener noreferrer" class="dev-credit">
+        <img src="/images/zero-nine.webp" alt="شعار Zero-Nine" width="52" height="52" loading="lazy" />
+        <span class="dev-text">
+          <span data-i18n="devBy">تم التطوير بواسطة</span>
+          <strong>zero—Nine</strong>
+        </span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ===== Language / i18n =====
+  var I18N = {
+    ar: {
+      brandName: 'عبدالله مبارك',
+      brandSub: 'العزايزي للاستشارات القانونية',
+      navHome: 'الرئيسية',
+      navAbout: 'من نحن',
+      navServices: 'الخدمات',
+      navImmigration: 'الجوازات والهجرة',
+      navPayments: 'طرق الدفع',
+      navFaq: 'الأسئلة الشائعة',
+      navContact: 'تواصل معنا',
+      heroBadge: 'استشارات قانونية وخدمات حكومية متكاملة',
+      heroDesc: 'متخصصون في إنهاء جميع الإجراءات القانونية والحكومية داخل جمهورية مصر العربية، وخدمات الجوازات والهجرة والجنسية للمصريين والأجانب، مع سرعة الإنجاز وسرية تامة.',
+      heroCta2: 'اطلب الخدمة',
+      aboutKicker: 'من نحن',
+      aboutTitle: 'خبرة قانونية تستحق ثقتك',
+      aboutDesc: 'نحن مجموعة متخصصة في إنهاء كافة الإجراءات القانونية والحكومية داخل جمهورية مصر العربية، مع خبرة واسعة في خدمات الجوازات والهجرة والجنسية، وإجراءات التجنيد، واكتساب الجنسية، والتنازل عنها، وإنهاء جميع المعاملات الرسمية للمصريين والأجانب بسرعة ودقة وسرية.',
+      aboutCta: 'ابدأ معاملتك الآن',
+      statYears: 'سنوات خبرة',
+      statCases: 'معاملة منجزة',
+      stat100: '١٠٠٪',
+      statSpeed: 'دقة وسرعة',
+      statSecrecy: 'سرية كاملة',
+      servicesKicker: 'خدماتنا',
+      servicesTitle: 'خدمات متكاملة تحت سقف واحد',
+      servicesDesc: 'نقدم مجموعة شاملة من الخدمات القانونية والحكومية بأعلى معايير الجودة والاحترافية.',
+      catImmigration: 'خدمات الجوازات والهجرة والجنسية',
+      catCivil: 'خدمات الأحوال المدنية',
+      catForeign: 'الخارجية المصرية',
+      catMissions: 'التعامل مع إدارة البعثات',
+      catMilitary: 'خدمات التجنيد',
+      catUni: 'الجامعات والنقابات',
+      catGov: 'الخدمات الحكومية',
+      catLegal: 'الخدمات القانونية',
+      bannerTitle: 'ورقك الحكومي <em>بدون طوابير</em>',
+      bannerDesc: 'بالتليفون ومن الباب إلى الباب.',
+      bannerCta: 'اطلب خدمتك الآن',
+      whyKicker: 'لماذا نحن',
+      whyTitle: 'لماذا يختارنا عملاؤنا؟',
+      why1Title: 'خبرة قانونية',
+      why1Desc: 'فريق متخصص بخبرة تتجاوز عشر سنوات في كافة الإجراءات القانونية والحكومية.',
+      why2Title: 'سرعة الإنجاز',
+      why2Desc: 'ننهي معاملتك في أسرع وقت ممكن دون أي تأخير أو تعقيدات.',
+      why3Title: 'سرية تامة',
+      why3Desc: 'جميع بياناتك ومستنداتك في أمان كامل مع الحفاظ على أعلى درجات الخصوصية.',
+      why4Title: 'متابعة مستمرة',
+      why4Desc: 'نطلعك على كل تطورات معاملتك أولًا بأول حتى استلامك الخدمة.',
+      processKicker: 'خطوات العمل',
+      processTitle: 'كيف نعمل؟',
+      processDesc: 'أربع خطوات بسيطة تفصلك عن إنهاء معاملتك بالكامل.',
+      step1Num: '١', step2Num: '٢', step3Num: '٣', step4Num: '٤',
+      step1Title: 'التواصل معنا',
+      step1Desc: 'اتصل بنا أو راسلنا عبر واتساب لتحديد الخدمة المطلوبة.',
+      step2Title: 'إرسال المستندات',
+      step2Desc: 'أرسل المستندات المطلوبة بكل سهولة دون الحاجة للحضور.',
+      step3Title: 'إنهاء الإجراءات',
+      step3Desc: 'نتولى كافة الإجراءات الرسمية نيابة عنك بسرعة ودقة.',
+      step4Title: 'استلام الخدمة',
+      step4Desc: 'تستلم أوراقك جاهزة حتى باب منزلك في أي مكان.',
+      faqKicker: 'الأسئلة الشائعة',
+      faqTitle: 'إجابات لأكثر الأسئلة تكرارًا',
+      faq1Q: 'كم تستغرق الإجراءات؟',
+      faq1A: 'تختلف المدة حسب نوع الخدمة، لكننا نحرص دائمًا على إنهاء المعاملات في أسرع وقت ممكن، وغالبًا ما تُنجز المستخرجات الرسمية خلال أيام قليلة.',
+      faq2Q: 'هل يمكن إنهاء الخدمة عن بعد؟',
+      faq2A: 'نعم بالتأكيد، جميع خدماتنا تتم بالتليفون ومن الباب إلى الباب دون الحاجة لحضورك شخصيًا، سواء كنت داخل مصر أو خارجها.',
+      faq3Q: 'كيف يتم الدفع؟',
+      faq3A: 'نوفر طرق دفع سهلة وآمنة عبر إنستاباي وفودافون كاش والتحويل البنكي المباشر عبر بنك مصر أو البنك الأهلي المصري.',
+      faq4Q: 'هل يوجد متابعة مستمرة؟',
+      faq4A: 'نعم، نوفر متابعة مستمرة لجميع مراحل معاملتك ونطلعك على المستجدات أولًا بأول حتى استلامك الخدمة كاملة.',
+      payKicker: 'طرق الدفع',
+      payTitle: 'ادفع بسهولة وأمان',
+      copyNumber: 'نسخ الرقم',
+      copied: 'تم النسخ!',
+      bankCardTitle: 'الحسابات البنكية',
+      bankCardSub: 'تحويل بنكي مباشر',
+      bankCardCta: 'اطلب الحساب البنكي',
+      bankModalKicker: 'الحسابات البنكية',
+      bankModalTitle: 'اختر البنك',
+      bankMisr: 'بنك مصر',
+      bankAhly: 'البنك الأهلي المصري',
+      bankOptionHint: 'اضغط لطلب رقم الحساب عبر واتساب',
+      bankWaMsgMisr: 'مرحبًا، أريد الحصول على رقم حساب بنك مصر للدفع',
+      bankWaMsgAhly: 'مرحبًا، أريد الحصول على رقم حساب البنك الأهلي المصري للدفع',
+      contactKicker: 'تواصل معنا',
+      contactTitle: 'نحن في انتظارك',
+      contactSub: 'ابدأ معاملتك اليوم',
+      contactDesc: 'تواصل معنا الآن وسيقوم فريقنا بالرد عليك في أسرع وقت لتحديد احتياجاتك وبدء إجراءاتك فورًا.',
+      callNow: 'اتصل الآن',
+      formName: 'الاسم',
+      formNamePh: 'اكتب اسمك الكامل',
+      formPhone: 'رقم الهاتف',
+      formService: 'الخدمة المطلوبة',
+      formServicePh: 'اختر الخدمة',
+      formOther: 'خدمة أخرى',
+      formMessage: 'رسالتك',
+      formMessagePh: 'اكتب تفاصيل طلبك هنا...',
+      formSubmit: 'أرسل رسالة',
+      formNote: 'تم تجهيز رسالتك، سيتم فتح واتساب لإرسالها الآن.',
+      modalKicker: 'طلب خدمة',
+      modalName: 'الاسم بالكامل',
+      modalDetails: 'تفاصيل الطلب (اختياري)',
+      modalDetailsPh: 'اكتب أي تفاصيل إضافية هنا...',
+      modalSend: 'إرسال عبر واتساب',
+      waTooltip: 'تواصل معنا عبر واتساب',
+      waRequest: 'طلب خدمة',
+      waName: 'الاسم',
+      waPhone: 'الهاتف',
+      waDetails: 'التفاصيل',
+      waService: 'الخدمة',
+      waMessage: 'الرسالة',
+      footerDesc: 'خبرة قانونية وإنهاء جميع الإجراءات الحكومية والقانونية داخل جمهورية مصر العربية بسرعة وسرية تامة.',
+      footerLinks: 'روابط سريعة',
+      footerPhones: 'أرقام التواصل',
+      footerRights: 'جميع الحقوق محفوظة',
+      footerBrandLine: 'عبدالله مبارك — العزايزي للاستشارات القانونية',
+      devBy: 'تم التطوير بواسطة',
+      langLabel: 'English',
+      docTitle: 'عبدالله مبارك | العزايزي للاستشارات القانونية'
+    },
+    en: {
+      brandName: 'Abdullah Mubarak',
+      brandSub: 'El-Azayzi Legal Consultancy',
+      navHome: 'Home',
+      navAbout: 'About Us',
+      navServices: 'Services',
+      navImmigration: 'Passports & Immigration',
+      navPayments: 'Payment Methods',
+      navFaq: 'FAQ',
+      navContact: 'Contact Us',
+      heroBadge: 'Comprehensive legal consultancy and government services',
+      heroDesc: 'Specialists in completing all legal and governmental procedures within the Arab Republic of Egypt, including passports, immigration, and nationality services for Egyptians and foreigners — fast and fully confidential.',
+      heroCta2: 'Request a Service',
+      aboutKicker: 'About Us',
+      aboutTitle: 'Legal Expertise You Can Trust',
+      aboutDesc: 'We are a specialized group dedicated to completing all legal and governmental procedures within Egypt, with extensive experience in passports, immigration and nationality services, military service procedures, acquiring or renouncing nationality, and finalizing all official transactions for Egyptians and foreigners quickly, accurately, and confidentially.',
+      aboutCta: 'Start Your Transaction Now',
+      statYears: 'Years of Experience',
+      statCases: 'Completed Transactions',
+      stat100: '100%',
+      statSpeed: 'Accuracy & Speed',
+      statSecrecy: 'Full Confidentiality',
+      servicesKicker: 'Our Services',
+      servicesTitle: 'Complete Services Under One Roof',
+      servicesDesc: 'We offer a comprehensive range of legal and governmental services with the highest standards of quality and professionalism.',
+      catImmigration: 'Passports, Immigration & Nationality Services',
+      catCivil: 'Civil Registry Services',
+      catForeign: 'Egyptian Ministry of Foreign Affairs',
+      catMissions: 'Missions Administration Affairs',
+      catMilitary: 'Military Service (Conscription)',
+      catUni: 'Universities & Syndicates',
+      catGov: 'Government Services',
+      catLegal: 'Legal Services',
+      bannerTitle: 'Your Government Paperwork <em>Without Queues</em>',
+      bannerDesc: 'By phone and door to door.',
+      bannerCta: 'Request Your Service Now',
+      whyKicker: 'Why Us',
+      whyTitle: 'Why Do Clients Choose Us?',
+      why1Title: 'Legal Expertise',
+      why1Desc: 'A specialized team with over ten years of experience in all legal and governmental procedures.',
+      why2Title: 'Fast Completion',
+      why2Desc: 'We finish your transaction as quickly as possible, with no delays or complications.',
+      why3Title: 'Full Confidentiality',
+      why3Desc: 'All your data and documents are completely secure with the highest level of privacy.',
+      why4Title: 'Continuous Follow-up',
+      why4Desc: 'We keep you updated on every step of your transaction until you receive the service.',
+      processKicker: 'How It Works',
+      processTitle: 'How Do We Work?',
+      processDesc: 'Four simple steps between you and completing your transaction.',
+      step1Num: '1', step2Num: '2', step3Num: '3', step4Num: '4',
+      step1Title: 'Contact Us',
+      step1Desc: 'Call us or message us on WhatsApp to specify the required service.',
+      step2Title: 'Send Documents',
+      step2Desc: 'Send the required documents easily without needing to attend in person.',
+      step3Title: 'Complete Procedures',
+      step3Desc: 'We handle all official procedures on your behalf quickly and accurately.',
+      step4Title: 'Receive the Service',
+      step4Desc: 'Receive your documents ready at your doorstep, wherever you are.',
+      faqKicker: 'FAQ',
+      faqTitle: 'Answers to the Most Common Questions',
+      faq1Q: 'How long do procedures take?',
+      faq1A: 'The duration varies by service type, but we always ensure transactions are completed as quickly as possible; official extracts are often ready within a few days.',
+      faq2Q: 'Can the service be completed remotely?',
+      faq2A: 'Absolutely. All our services are handled by phone and door to door, without requiring your presence — whether you are inside Egypt or abroad.',
+      faq3Q: 'How is payment made?',
+      faq3A: 'We provide easy and secure payment methods via Instapay, Vodafone Cash, and direct bank transfer through Banque Misr or the National Bank of Egypt.',
+      faq4Q: 'Is there continuous follow-up?',
+      faq4A: 'Yes, we provide continuous follow-up on every stage of your transaction and keep you updated until you receive the full service.',
+      payKicker: 'Payment Methods',
+      payTitle: 'Pay Easily and Securely',
+      copyNumber: 'Copy Number',
+      copied: 'Copied!',
+      bankCardTitle: 'Bank Accounts',
+      bankCardSub: 'Direct bank transfer',
+      bankCardCta: 'Request Bank Account',
+      bankModalKicker: 'Bank Accounts',
+      bankModalTitle: 'Choose a Bank',
+      bankMisr: 'Banque Misr',
+      bankAhly: 'National Bank of Egypt',
+      bankOptionHint: 'Tap to request the account number via WhatsApp',
+      bankWaMsgMisr: 'Hello, I would like the Banque Misr account number for payment',
+      bankWaMsgAhly: 'Hello, I would like the National Bank of Egypt account number for payment',
+      contactKicker: 'Contact Us',
+      contactTitle: 'We Are Waiting for You',
+      contactSub: 'Start Your Transaction Today',
+      contactDesc: 'Contact us now and our team will respond as quickly as possible to identify your needs and start your procedures immediately.',
+      callNow: 'Call Now',
+      formName: 'Name',
+      formNamePh: 'Enter your full name',
+      formPhone: 'Phone Number',
+      formService: 'Required Service',
+      formServicePh: 'Choose a service',
+      formOther: 'Other Service',
+      formMessage: 'Your Message',
+      formMessagePh: 'Write your request details here...',
+      formSubmit: 'Send Message',
+      formNote: 'Your message is ready; WhatsApp will open to send it now.',
+      modalKicker: 'Service Request',
+      modalName: 'Full Name',
+      modalDetails: 'Request Details (optional)',
+      modalDetailsPh: 'Write any additional details here...',
+      modalSend: 'Send via WhatsApp',
+      waTooltip: 'Contact us on WhatsApp',
+      waRequest: 'Service request',
+      waName: 'Name',
+      waPhone: 'Phone',
+      waDetails: 'Details',
+      waService: 'Service',
+      waMessage: 'Message',
+      footerDesc: 'Legal expertise and completion of all governmental and legal procedures within Egypt, quickly and with full confidentiality.',
+      footerLinks: 'Quick Links',
+      footerPhones: 'Contact Numbers',
+      footerRights: 'All rights reserved',
+      footerBrandLine: 'Abdullah Mubarak — El-Azayzi Legal Consultancy',
+      devBy: 'Developed by',
+      langLabel: 'عربي',
+      docTitle: 'Abdullah Mubarak | El-Azayzi Legal Consultancy'
+    }
+  };
+
+  // ===== Service data (both languages, in the required order) =====
+  var SERVICES = {
+    ar: {
+      'immigration-cards': [
+        ['استخراج جوازات السفر أول مرة', 'استخراج جواز السفر لأول مرة بسهولة وسرعة'],
+        ['بدل فاقد جواز السفر', 'استخراج بدل فاقد لجواز السفر في أسرع وقت'],
+        ['الإقامة', 'استخراج وتجديد إقامات الأجانب'],
+        ['الجنسية المصرية', 'إجراءات الحصول على الجنسية المصرية'],
+        ['ازدواج الجنسية', 'تقنين أوضاع مزدوجي الجنسية'],
+        ['اكتساب الجنسية', 'إنهاء إجراءات اكتساب الجنسية'],
+        ['التنازل عن الجنسية', 'إجراءات التنازل الرسمية كاملة'],
+        ['الممنوعين من السفر', 'إنهاء إجراءات الممنوعين من السفر'],
+      ],
+      'civil-cards': [
+        ['شهادة الميلاد', 'مستخرج رسمي حديث ومعتمد'],
+        ['شهادة الزواج', 'استخراج قسيمة الزواج الرسمية'],
+        ['شهادة الطلاق', 'استخراج قسيمة الطلاق الرسمية'],
+        ['شهادة الوفاة', 'مستخرج رسمي لشهادة الوفاة'],
+        ['بطاقة الرقم القومي', 'استخراج وتجديد البطاقة'],
+        ['جواز السفر', 'استخراج وتجديد جوازات السفر'],
+        ['القيد العائلي', 'مستخرج قيد عائلي رسمي'],
+        ['القيد الفردي', 'مستخرج قيد فردي رسمي'],
+        ['شهادة التحركات', 'بيان رسمي بالتحركات الدولية'],
+        ['مستخرج المؤهل الجامعي', 'استخراج شهادات المؤهلات'],
+        ['مواليد الخارج', 'قيد وتوثيق مواليد الخارج'],
+      ],
+      'foreign-cards': [
+        ['ترجمة المستندات', 'ترجمة معتمدة لكافة المستندات'],
+        ['توثيق الخارجية المصرية', 'توثيق المستندات من وزارة الخارجية'],
+        ['توثيق السفارات', 'توثيق الأوراق من كافة السفارات'],
+        ['التصديقات الرسمية', 'تصديق المستندات من الجهات الرسمية'],
+        ['إنهاء جميع إجراءات التوثيق', 'للمصريين والأجانب من الباب للباب'],
+      ],
+      'missions-cards': [
+        ['تسريع الموافقات الأمنية', 'إنهاء الموافقات الأمنية في أسرع وقت'],
+        ['استخراج تصاريح السفر', 'استخراج تصاريح السفر الرسمية'],
+      ],
+      'military-cards': [
+        ['إنهاء إجراءات التجنيد', 'تحديد الموقف من التجنيد'],
+        ['خدمات مزدوجي الجنسية', 'إعفاءات وتسويات مزدوجي الجنسية'],
+        ['اكتساب الجنسية', 'إجراءات التجنيد لمكتسبي الجنسية'],
+        ['التنازل عن الجنسية', 'تسوية الموقف بعد التنازل'],
+      ],
+      'uni-cards': [
+        ['إجراءات الجامعات', 'إنهاء كافة المعاملات الجامعية'],
+        ['النقابات', 'إنهاء إجراءات القيد بالنقابات'],
+        ['تراخيص الأطباء', 'استخراج تراخيص مزاولة المهنة'],
+        ['التكليف', 'إنهاء إجراءات التكليف الحكومي'],
+      ],
+      'gov-cards': [
+        ['استخراج العلامات التجارية', 'تسجيل وحماية علامتك التجارية'],
+        ['البطاقة الضريبية', 'استخراج وتجديد البطاقة الضريبية'],
+        ['السجل التجاري', 'استخراج وتعديل السجل التجاري'],
+        ['التأمينات الاجتماعية', 'إنهاء معاملات التأمينات كاملة'],
+      ],
+      'legal-cards': [
+        ['متابعة الإجراءات الحكومية والقانونية', 'متابعة شاملة لكافة معاملاتك الرسمية'],
+        ['إنهاء إجراءات الزواج', 'إتمام كافة إجراءات وتوثيق الزواج'],
+        ['الطلاق', 'إنهاء إجراءات الطلاق بسرية تامة'],
+        ['الخلع', 'متابعة دعاوى الخلع حتى الحكم النهائي'],
+        ['الحضانة', 'قضايا الحضانة وحقوق الأطفال'],
+        ['رؤية الصغار', 'تنظيم وتنفيذ أحكام الرؤية'],
+        ['تسوية المواريث', 'حصر وتقسيم المواريث قانونيًا'],
+        ['التركات', 'إنهاء إجراءات التركات كاملة'],
+        ['المنازعات القضائية', 'تمثيل قانوني في كافة المنازعات'],
+        ['القضايا الجنائية', 'دفاع ومتابعة القضايا الجنائية'],
+        ['تنفيذ الأحكام', 'متابعة تنفيذ الأحكام القضائية'],
+        ['متابعة القضايا', 'متابعة دورية لجميع مراحل القضية'],
+        ['الاستعلام القضائي', 'استعلام فوري عن حالة القضايا'],
+        ['صياغة العقود', 'صياغة قانونية دقيقة لكافة العقود'],
+        ['عقود البيع والشراء', 'توثيق وتسجيل عقود الملكية'],
+        ['الاستشارات القانونية', 'استشارات متخصصة في جميع الفروع'],
+      ]
+    },
+    en: {
+      'immigration-cards': [
+        ['First-Time Passport Issuance', 'Issue your first passport easily and quickly'],
+        ['Replacement of Lost Passport', 'Get a replacement for a lost passport in record time'],
+        ['Residency', 'Issuing and renewing residency permits for foreigners'],
+        ['Egyptian Nationality', 'Procedures for obtaining Egyptian nationality'],
+        ['Dual Nationality', 'Regularizing the status of dual nationals'],
+        ['Acquiring Nationality', 'Completing nationality acquisition procedures'],
+        ['Renouncing Nationality', 'Full official renunciation procedures'],
+        ['Travel Ban Cases', 'Resolving procedures for those banned from travel'],
+      ],
+      'civil-cards': [
+        ['Birth Certificate', 'Recent certified official extract'],
+        ['Marriage Certificate', 'Issuing the official marriage certificate'],
+        ['Divorce Certificate', 'Issuing the official divorce certificate'],
+        ['Death Certificate', 'Official death certificate extract'],
+        ['National ID Card', 'Issuing and renewing the national ID'],
+        ['Passport', 'Issuing and renewing passports'],
+        ['Family Record', 'Official family registration extract'],
+        ['Individual Record', 'Official individual registration extract'],
+        ['Movement Certificate', 'Official statement of international movements'],
+        ['University Degree Extract', 'Issuing qualification certificates'],
+        ['Births Abroad', 'Registering and certifying births abroad'],
+      ],
+      'foreign-cards': [
+        ['Document Translation', 'Certified translation of all documents'],
+        ['Foreign Ministry Authentication', 'Authenticating documents at the Ministry of Foreign Affairs'],
+        ['Embassy Authentication', 'Authenticating papers at all embassies'],
+        ['Official Attestations', 'Attesting documents from official authorities'],
+        ['Complete Authentication Services', 'For Egyptians and foreigners, door to door'],
+      ],
+      'missions-cards': [
+        ['Expediting Security Clearances', 'Finalizing security approvals as fast as possible'],
+        ['Travel Permits', 'Issuing official travel permits'],
+      ],
+      'military-cards': [
+        ['Military Service Procedures', 'Determining your conscription status'],
+        ['Dual Nationals Services', 'Exemptions and settlements for dual nationals'],
+        ['Acquired Nationality', 'Conscription procedures for naturalized citizens'],
+        ['Renounced Nationality', 'Settling status after renunciation'],
+      ],
+      'uni-cards': [
+        ['University Procedures', 'Completing all university transactions'],
+        ['Syndicates', 'Completing syndicate registration procedures'],
+        ['Doctors\u2019 Licenses', 'Issuing professional practice licenses'],
+        ['Government Assignment', 'Completing government assignment procedures'],
+      ],
+      'gov-cards': [
+        ['Trademark Registration', 'Registering and protecting your trademark'],
+        ['Tax Card', 'Issuing and renewing the tax card'],
+        ['Commercial Register', 'Issuing and amending the commercial register'],
+        ['Social Insurance', 'Completing all insurance transactions'],
+      ],
+      'legal-cards': [
+        ['Government & Legal Follow-up', 'Comprehensive follow-up on all your official transactions'],
+        ['Marriage Procedures', 'Completing all marriage procedures and documentation'],
+        ['Divorce', 'Completing divorce procedures with full confidentiality'],
+        ['Khula (Divorce by Wife)', 'Following khula cases until the final ruling'],
+        ['Child Custody', 'Custody cases and children\u2019s rights'],
+        ['Child Visitation', 'Organizing and enforcing visitation rulings'],
+        ['Inheritance Settlement', 'Legally inventorying and dividing inheritances'],
+        ['Estates', 'Completing all estate procedures'],
+        ['Judicial Disputes', 'Legal representation in all disputes'],
+        ['Criminal Cases', 'Defense and follow-up of criminal cases'],
+        ['Judgment Enforcement', 'Following up on the enforcement of court rulings'],
+        ['Case Follow-up', 'Regular follow-up on all case stages'],
+        ['Judicial Inquiry', 'Instant inquiry about case status'],
+        ['Contract Drafting', 'Precise legal drafting of all contracts'],
+        ['Sale & Purchase Contracts', 'Documenting and registering ownership contracts'],
+        ['Legal Consultations', 'Specialized consultations in all branches of law'],
+      ]
+    }
+  };
+
+  var currentLang = 'ar';
+  try {
+    var saved = localStorage.getItem('site-lang');
+    if (saved === 'en' || saved === 'ar') currentLang = saved;
+  } catch (e) {}
+
+  function t(key) { return I18N[currentLang][key] || I18N.ar[key] || key; }
+
+  var checkIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>';
+  function renderCards(id, items) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.innerHTML = items.map(function (t) {
+      return '<div class="service-card" role="button" tabindex="0" data-service="' + t[0] + '"><span class="dot">' + checkIcon + '</span><div><h4>' + t[0] + '</h4><p>' + t[1] + '</p></div></div>';
+    }).join('');
+    bindServiceCards(el);
+  }
+
+  function renderAllCards() {
+    var data = SERVICES[currentLang];
+    Object.keys(data).forEach(function (id) { renderCards(id, data[id]); });
+  }
+
+  function renderServiceSelect() {
+    var select = document.getElementById('f-service');
+    if (!select) return;
+    var previous = select.value;
+    var catKeys = ['catImmigration', 'catCivil', 'catForeign', 'catMissions', 'catMilitary', 'catUni', 'catGov', 'catLegal'];
+    var html = '<option value="" disabled selected>' + t('formServicePh') + '</option>';
+    catKeys.forEach(function (key) { html += '<option>' + t(key) + '</option>'; });
+    html += '<option>' + t('formOther') + '</option>';
+    select.innerHTML = html;
+    if (previous) select.value = previous;
+  }
+
+  function applyLanguage() {
+    var dict = I18N[currentLang];
+    document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+    document.title = dict.docTitle;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
+    });
+    var bannerTitle = document.getElementById('banner-title');
+    if (bannerTitle) bannerTitle.innerHTML = dict.bannerTitle;
+    var langLabel = document.getElementById('lang-toggle-label');
+    if (langLabel) langLabel.textContent = dict.langLabel;
+    renderAllCards();
+    renderServiceSelect();
+    // Re-run counters formatting only matters mid-animation; leave counts as-is.
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+  }
+
+  document.getElementById('lang-toggle').addEventListener('click', function () {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    try { localStorage.setItem('site-lang', currentLang); } catch (e) {}
+    applyLanguage();
+  });
+
+  // ===== Loader =====
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      document.getElementById('loader').classList.add('hidden');
+    }, 700);
+  });
+
+  // ===== Sticky header =====
+  var header = document.getElementById('header');
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // ===== Mobile menu =====
+  var burger = document.getElementById('burger');
+  var nav = document.getElementById('nav');
+  burger.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // ===== Service modal =====
+  var serviceModal = document.getElementById('service-modal');
+  var modalServiceName = document.getElementById('modal-service-name');
+  var currentService = '';
+  function openServiceModal(name) {
+    currentService = name;
+    modalServiceName.textContent = name;
+    serviceModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('m-name').focus();
+  }
+  function closeServiceModal() {
+    serviceModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function bindServiceCards(scope) {
+    (scope || document).querySelectorAll('.service-card[data-service]').forEach(function (card) {
+      card.addEventListener('click', function () { openServiceModal(card.getAttribute('data-service')); });
+      card.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openServiceModal(card.getAttribute('data-service')); }
+      });
+    });
+  }
+  document.getElementById('modal-close').addEventListener('click', closeServiceModal);
+  serviceModal.addEventListener('click', function (e) { if (e.target === serviceModal) closeServiceModal(); });
+  document.getElementById('service-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('m-name').value;
+    var phone = document.getElementById('m-phone').value;
+    var message = document.getElementById('m-message').value;
+    var text = t('waRequest') + ': ' + currentService + '\n' + t('waName') + ': ' + name + '\n' + t('waPhone') + ': ' + phone + (message ? '\n' + t('waDetails') + ': ' + message : '');
+    window.open('https://wa.me/201020788788?text=' + encodeURIComponent(text), '_blank');
+    closeServiceModal();
+    this.reset();
+  });
+
+  // ===== Bank choice modal =====
+  var bankModal = document.getElementById('bank-modal');
+  function closeBankModal() {
+    bankModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('bank-request-btn').addEventListener('click', function () {
+    bankModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+  document.getElementById('bank-modal-close').addEventListener('click', closeBankModal);
+  bankModal.addEventListener('click', function (e) { if (e.target === bankModal) closeBankModal(); });
+  document.querySelectorAll('.bank-option').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var bank = btn.getAttribute('data-bank');
+      var msg = bank === 'misr' ? t('bankWaMsgMisr') : t('bankWaMsgAhly');
+      window.open('https://wa.me/201020788788?text=' + encodeURIComponent(msg), '_blank');
+      closeBankModal();
+    });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closeServiceModal(); closeBankModal(); }
+  });
+
+  // ===== Reveal on scroll =====
+  var revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { revealObserver.observe(el); });
+
+  // ===== Animated counters =====
+  var counterObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      var start = null;
+      function tick(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / 1600, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = '+' + Math.floor(eased * target).toLocaleString(currentLang === 'ar' ? 'ar-EG' : 'en-US');
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      counterObserver.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.num[data-count]').forEach(function (el) { counterObserver.observe(el); });
+
+  // ===== FAQ accordion =====
+  document.querySelectorAll('.faq-q').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.parentElement;
+      var answer = item.querySelector('.faq-a');
+      var isOpen = item.classList.contains('active');
+      document.querySelectorAll('.faq-item.active').forEach(function (open) {
+        open.classList.remove('active');
+        open.querySelector('.faq-a').style.maxHeight = null;
+        open.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ===== Copy buttons =====
+  document.querySelectorAll('.copy-btn[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var number = btn.getAttribute('data-copy');
+      navigator.clipboard.writeText(number).then(function () {
+        var original = btn.innerHTML;
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M20 6 9 17l-5-5"/></svg> ' + t('copied');
+        setTimeout(function () { btn.innerHTML = original; }, 2000);
+      });
+    });
+  });
+
+  // ===== Contact form → WhatsApp =====
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('f-name').value;
+    var phone = document.getElementById('f-phone').value;
+    var service = document.getElementById('f-service').value;
+    var message = document.getElementById('f-message').value;
+    var text = t('waName') + ': ' + name + '\n' + t('waPhone') + ': ' + phone + '\n' + t('waService') + ': ' + service + (message ? '\n' + t('waMessage') + ': ' + message : '');
+    document.getElementById('form-note').classList.add('show');
+    window.open('https://wa.me/201020788788?text=' + encodeURIComponent(text), '_blank');
+  });
+
+  // ===== Year =====
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== Initial render =====
+  renderServiceSelect();
+  renderAllCards();
+  if (currentLang !== 'ar') applyLanguage();
+</script>
+</body>
+</html>
