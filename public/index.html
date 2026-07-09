@@ -427,6 +427,7 @@
     border-top: 1px dashed var(--border); padding-top: 10px; margin: 0;
   }
   .modal-attachments .ma-note svg { width: 15px; height: 15px; color: var(--secondary); flex-shrink: 0; margin-top: 2px; }
+  .modal-attachments .ma-note-only { border-top: none; padding-top: 0; }
   .modal-box .field { margin-bottom: 16px; }
   .modal-box label { display: block; font-weight: 700; margin-bottom: 7px; font-size: .95rem; color: var(--primary); }
   .modal-box input, .modal-box textarea {
@@ -1469,22 +1470,19 @@
           'صورة الباسبور المصري (إذ أمكن)',
           'صورة الباسبور الأجنبي',
           'صورة شهادة الجيش (إذ أمكن)'
-        ],
-        note: 'يوجد بعض الإجراءات تحتاج إلى توكيل'
+        ]
       },
       'civil-cards': {
         title: 'المرفقات المطلوبة',
         items: [
           'صورة البطاقة الشخصية'
-        ],
-        note: 'يوجد بعض الإجراءات تحتاج إلى توكيل'
+        ]
       },
       'foreign-cards': {
         title: 'المرفقات المطلوبة',
         items: [
           'إرفاق المستندات المراد إنهاء إجراءات التوثيق لها'
-        ],
-        note: 'يوجد بعض الإجراءات تحتاج إلى توكيل'
+        ]
       },
       'uni-cards': {
         title: 'المرفقات المطلوبة',
@@ -1492,8 +1490,7 @@
           'صورة البطاقة',
           'صورة المؤهل الجامعي',
           'صورة بيان الدرجات'
-        ],
-        note: 'يوجد بعض الإجراءات تحتاج إلى توكيل'
+        ]
       }
     },
     en: {
@@ -1504,22 +1501,19 @@
           'Copy of the Egyptian passport (if available)',
           'Copy of the foreign passport',
           'Copy of the military service certificate (if available)'
-        ],
-        note: 'Some procedures require a power of attorney'
+        ]
       },
       'civil-cards': {
         title: 'Required Attachments',
         items: [
           'Copy of the personal ID card'
-        ],
-        note: 'Some procedures require a power of attorney'
+        ]
       },
       'foreign-cards': {
         title: 'Required Attachments',
         items: [
           'Attach the documents required to complete the authentication procedures'
-        ],
-        note: 'Some procedures require a power of attorney'
+        ]
       },
       'uni-cards': {
         title: 'Required Attachments',
@@ -1527,10 +1521,15 @@
           'Copy of the ID card',
           'Copy of the university qualification',
           'Copy of the grade transcript'
-        ],
-        note: 'Some procedures require a power of attorney'
+        ]
       }
     }
+  };
+
+  // ===== General note shown on every service request (both languages) =====
+  var GENERAL_NOTE = {
+    ar: 'يوجد بعض الإجراءات تحتاج إلى توكيل',
+    en: 'Some procedures require a power of attorney'
   };
 
   var currentLang = 'ar';
@@ -1638,10 +1637,14 @@
   var infoIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>';
   function renderModalAttachments(cat) {
     var data = ATTACHMENTS[currentLang] && ATTACHMENTS[currentLang][cat];
-    if (!data) { modalAttachments.style.display = 'none'; modalAttachments.innerHTML = ''; return; }
-    var html = '<div class="ma-title">' + docIcon + '<span>' + data.title + '</span></div>';
-    html += '<ul>' + data.items.map(function (item) { return '<li>' + checkSmall + '<span>' + item + '</span></li>'; }).join('') + '</ul>';
-    if (data.note) html += '<p class="ma-note">' + infoIcon + '<span>' + data.note + '</span></p>';
+    var html = '';
+    if (data) {
+      html += '<div class="ma-title">' + docIcon + '<span>' + data.title + '</span></div>';
+      html += '<ul>' + data.items.map(function (item) { return '<li>' + checkSmall + '<span>' + item + '</span></li>'; }).join('') + '</ul>';
+      html += '<p class="ma-note">' + infoIcon + '<span>' + GENERAL_NOTE[currentLang] + '</span></p>';
+    } else {
+      html += '<p class="ma-note ma-note-only">' + infoIcon + '<span>' + GENERAL_NOTE[currentLang] + '</span></p>';
+    }
     modalAttachments.innerHTML = html;
     modalAttachments.style.display = 'block';
   }
