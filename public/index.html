@@ -408,6 +408,25 @@
   .modal-close svg { width: 18px; height: 18px; }
   .modal-box .m-kicker { color: var(--secondary); font-weight: 700; font-size: .85rem; letter-spacing: 1px; }
   .modal-box h3 { font-size: 1.35rem; margin: 4px 0 20px; color: var(--primary); }
+  .modal-attachments {
+    background: var(--bg); border: 1.5px solid var(--border); border-radius: 14px;
+    padding: 16px 18px; margin-bottom: 20px;
+  }
+  .modal-attachments .ma-title {
+    display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--primary);
+    font-size: .95rem; margin-bottom: 10px;
+  }
+  .modal-attachments .ma-title svg { width: 18px; height: 18px; color: var(--secondary); flex-shrink: 0; }
+  .modal-attachments ul { list-style: none; margin: 0 0 12px; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+  .modal-attachments ul li {
+    display: flex; align-items: flex-start; gap: 8px; font-size: .9rem; color: var(--dark);
+  }
+  .modal-attachments ul li svg { width: 15px; height: 15px; color: var(--secondary); flex-shrink: 0; margin-top: 3px; }
+  .modal-attachments .ma-note {
+    display: flex; align-items: flex-start; gap: 8px; font-size: .82rem; color: #6b7178;
+    border-top: 1px dashed var(--border); padding-top: 10px; margin: 0;
+  }
+  .modal-attachments .ma-note svg { width: 15px; height: 15px; color: var(--secondary); flex-shrink: 0; margin-top: 2px; }
   .modal-box .field { margin-bottom: 16px; }
   .modal-box label { display: block; font-weight: 700; margin-bottom: 7px; font-size: .95rem; color: var(--primary); }
   .modal-box input, .modal-box textarea {
@@ -949,6 +968,7 @@
     </button>
     <span class="m-kicker" data-i18n="modalKicker">طلب خدمة</span>
     <h3 id="modal-service-name">اسم الخدمة</h3>
+    <div class="modal-attachments" id="modal-attachments" style="display:none;"></div>
     <form id="service-form">
       <div class="field">
         <label for="m-name" data-i18n="modalName">الاسم بالكامل</label>
@@ -1439,6 +1459,80 @@
     }
   };
 
+  // ===== Required attachments per category (both languages) =====
+  var ATTACHMENTS = {
+    ar: {
+      'immigration-cards': {
+        title: 'المرفقات المطلوبة',
+        items: [
+          'صورة بطاقة الرقم القومي',
+          'صورة الباسبور المصري (إذ أمكن)',
+          'صورة الباسبور الأجنبي',
+          'صورة شهادة الجيش (إذ أمكن)'
+        ],
+        note: 'يوجد بعض الإجراءات تحتاج إلى توكيل'
+      },
+      'civil-cards': {
+        title: 'المرفقات المطلوبة',
+        items: [
+          'صورة البطاقة الشخصية'
+        ],
+        note: 'يوجد بعض الإجراءات تحتاج إلى توكيل'
+      },
+      'foreign-cards': {
+        title: 'المرفقات المطلوبة',
+        items: [
+          'إرفاق المستندات المراد إنهاء إجراءات التوثيق لها'
+        ],
+        note: 'يوجد بعض الإجراءات تحتاج إلى توكيل'
+      },
+      'uni-cards': {
+        title: 'المرفقات المطلوبة',
+        items: [
+          'صورة البطاقة',
+          'صورة المؤهل الجامعي',
+          'صورة بيان الدرجات'
+        ],
+        note: 'يوجد بعض الإجراءات تحتاج إلى توكيل'
+      }
+    },
+    en: {
+      'immigration-cards': {
+        title: 'Required Attachments',
+        items: [
+          'Copy of the National ID card',
+          'Copy of the Egyptian passport (if available)',
+          'Copy of the foreign passport',
+          'Copy of the military service certificate (if available)'
+        ],
+        note: 'Some procedures require a power of attorney'
+      },
+      'civil-cards': {
+        title: 'Required Attachments',
+        items: [
+          'Copy of the personal ID card'
+        ],
+        note: 'Some procedures require a power of attorney'
+      },
+      'foreign-cards': {
+        title: 'Required Attachments',
+        items: [
+          'Attach the documents required to complete the authentication procedures'
+        ],
+        note: 'Some procedures require a power of attorney'
+      },
+      'uni-cards': {
+        title: 'Required Attachments',
+        items: [
+          'Copy of the ID card',
+          'Copy of the university qualification',
+          'Copy of the grade transcript'
+        ],
+        note: 'Some procedures require a power of attorney'
+      }
+    }
+  };
+
   var currentLang = 'ar';
   try {
     var saved = localStorage.getItem('site-lang');
@@ -1452,7 +1546,7 @@
     var el = document.getElementById(id);
     if (!el) return;
     el.innerHTML = items.map(function (t) {
-      return '<div class="service-card" role="button" tabindex="0" data-service="' + t[0] + '"><span class="dot">' + checkIcon + '</span><div><h4>' + t[0] + '</h4><p>' + t[1] + '</p></div></div>';
+      return '<div class="service-card" role="button" tabindex="0" data-service="' + t[0] + '" data-cat="' + id + '"><span class="dot">' + checkIcon + '</span><div><h4>' + t[0] + '</h4><p>' + t[1] + '</p></div></div>';
     }).join('');
     bindServiceCards(el);
   }
@@ -1537,10 +1631,24 @@
   // ===== Service modal =====
   var serviceModal = document.getElementById('service-modal');
   var modalServiceName = document.getElementById('modal-service-name');
+  var modalAttachments = document.getElementById('modal-attachments');
   var currentService = '';
-  function openServiceModal(name) {
+  var docIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>';
+  var checkSmall = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>';
+  var infoIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>';
+  function renderModalAttachments(cat) {
+    var data = ATTACHMENTS[currentLang] && ATTACHMENTS[currentLang][cat];
+    if (!data) { modalAttachments.style.display = 'none'; modalAttachments.innerHTML = ''; return; }
+    var html = '<div class="ma-title">' + docIcon + '<span>' + data.title + '</span></div>';
+    html += '<ul>' + data.items.map(function (item) { return '<li>' + checkSmall + '<span>' + item + '</span></li>'; }).join('') + '</ul>';
+    if (data.note) html += '<p class="ma-note">' + infoIcon + '<span>' + data.note + '</span></p>';
+    modalAttachments.innerHTML = html;
+    modalAttachments.style.display = 'block';
+  }
+  function openServiceModal(name, cat) {
     currentService = name;
     modalServiceName.textContent = name;
+    renderModalAttachments(cat);
     serviceModal.classList.add('open');
     document.body.style.overflow = 'hidden';
     document.getElementById('m-name').focus();
@@ -1551,9 +1659,9 @@
   }
   function bindServiceCards(scope) {
     (scope || document).querySelectorAll('.service-card[data-service]').forEach(function (card) {
-      card.addEventListener('click', function () { openServiceModal(card.getAttribute('data-service')); });
+      card.addEventListener('click', function () { openServiceModal(card.getAttribute('data-service'), card.getAttribute('data-cat')); });
       card.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openServiceModal(card.getAttribute('data-service')); }
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openServiceModal(card.getAttribute('data-service'), card.getAttribute('data-cat')); }
       });
     });
   }
