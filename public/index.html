@@ -976,6 +976,10 @@
         <input type="text" id="m-name" name="name" placeholder="اكتب اسمك الكامل" data-i18n-placeholder="formNamePh" required />
       </div>
       <div class="field">
+        <label for="m-national-id" data-i18n="formNationalId">الرقم القومي</label>
+        <input type="tel" inputmode="numeric" pattern="[0-9]*" id="m-national-id" name="nationalId" placeholder="14 رقم" data-i18n-placeholder="formNationalIdPh" maxlength="14" required />
+      </div>
+      <div class="field">
         <label for="m-phone" data-i18n="formPhone">رقم الهاتف</label>
         <input type="tel" id="m-phone" name="phone" placeholder="01XXXXXXXXX" required />
       </div>
@@ -1162,6 +1166,8 @@
       formName: 'الاسم',
       formNamePh: 'اكتب اسمك الكامل',
       formPhone: 'رقم الهاتف',
+      formNationalId: 'الرقم القومي',
+      formNationalIdPh: '14 رقم',
       formService: 'الخدمة المطلوبة',
       formServicePh: 'اختر الخدمة',
       formOther: 'خدمة أخرى',
@@ -1177,6 +1183,7 @@
       waTooltip: 'تواصل معنا عبر واتساب',
       waRequest: 'طلب خدمة',
       waName: 'الاسم',
+      waNationalId: 'الرقم القومي',
       waPhone: 'الهاتف',
       waDetails: 'التفاصيل',
       waService: 'الخدمة',
@@ -1280,6 +1287,8 @@
       formName: 'Name',
       formNamePh: 'Enter your full name',
       formPhone: 'Phone Number',
+      formNationalId: 'National ID Number',
+      formNationalIdPh: '14 digits',
       formService: 'Required Service',
       formServicePh: 'Choose a service',
       formOther: 'Other Service',
@@ -1295,6 +1304,7 @@
       waTooltip: 'Contact us on WhatsApp',
       waRequest: 'Service request',
       waName: 'Name',
+      waNationalId: 'National ID',
       waPhone: 'Phone',
       waDetails: 'Details',
       waService: 'Service',
@@ -1491,6 +1501,14 @@
           'صورة المؤهل الجامعي',
           'صورة بيان الدرجات'
         ]
+      },
+      'military-cards': {
+        title: 'المرفقات المطلوبة',
+        items: [
+          'صورة الرقم القومي',
+          'صورة الباسبور المصري (إن وجد)',
+          'صورة الباسبور الأجنبي'
+        ]
       }
     },
     en: {
@@ -1521,6 +1539,14 @@
           'Copy of the ID card',
           'Copy of the university qualification',
           'Copy of the grade transcript'
+        ]
+      },
+      'military-cards': {
+        title: 'Required Attachments',
+        items: [
+          'Copy of the National ID card',
+          'Copy of the Egyptian passport (if available)',
+          'Copy of the foreign passport'
         ]
       }
     }
@@ -1670,12 +1696,16 @@
   }
   document.getElementById('modal-close').addEventListener('click', closeServiceModal);
   serviceModal.addEventListener('click', function (e) { if (e.target === serviceModal) closeServiceModal(); });
+  document.getElementById('m-national-id').addEventListener('input', function () {
+    this.value = this.value.replace(/[^0-9]/g, '');
+  });
   document.getElementById('service-form').addEventListener('submit', function (e) {
     e.preventDefault();
     var name = document.getElementById('m-name').value;
+    var nationalId = document.getElementById('m-national-id').value;
     var phone = document.getElementById('m-phone').value;
     var message = document.getElementById('m-message').value;
-    var text = t('waRequest') + ': ' + currentService + '\n' + t('waName') + ': ' + name + '\n' + t('waPhone') + ': ' + phone + (message ? '\n' + t('waDetails') + ': ' + message : '');
+    var text = t('waRequest') + ': ' + currentService + '\n' + t('waName') + ': ' + name + '\n' + t('waNationalId') + ': ' + nationalId + '\n' + t('waPhone') + ': ' + phone + (message ? '\n' + t('waDetails') + ': ' + message : '');
     window.open('https://wa.me/201020788788?text=' + encodeURIComponent(text), '_blank');
     closeServiceModal();
     this.reset();
